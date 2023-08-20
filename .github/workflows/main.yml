@@ -1,0 +1,28 @@
+name: Run Fastlane Unit Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2p137 # You can specify the Ruby version you need
+
+    - name: Install Bundler and Fastlane
+      run: |
+        gem install bundler
+        bundle install --without=documentation --path vendor/bundle
+
+    - name: Run Fastlane Unit Tests
+      run: |
+        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
