@@ -3,7 +3,7 @@ name: Run iOS UI Tests
 on:
   pull_request:
     branches:
-      - main # Adjust this as per your branch
+      - develop # Adjust this as per your branch
 
 jobs:
   ui-tests:
