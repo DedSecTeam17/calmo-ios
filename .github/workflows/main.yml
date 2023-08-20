@@ -16,7 +16,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.2p137 # You can specify the Ruby version you need
+        ruby-version: 2.6 # You can specify the Ruby version you need
 
     - name: Install Bundler and Fastlane
       run: |
