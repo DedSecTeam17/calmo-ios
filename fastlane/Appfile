@@ -1,0 +1,10 @@
+app_identifier("deadsec.calmo") # The bundle identifier of your app
+apple_id("mohammedelamin26.me@gmail.com") # Your Apple Developer Portal username
+
+itc_team_id("126529924") # App Store Connect Team ID
+team_id("622R8DQ67C") # Developer Portal Team ID
+itc_team_id("126529924") # App Store Connect Team ID
+team_id("622R8DQ67C") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

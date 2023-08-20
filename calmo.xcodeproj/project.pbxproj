@@ -7,18 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E95BB3A72A60F0FD00CB5700 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3A62A60F0FC00CB5700 /* SignInScreen.swift */; };
+		E95BB3A92A60FCC900CB5700 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3A82A60FCC900CB5700 /* CustomNavBar.swift */; };
+		E95BB3AB2A61BE3200CB5700 /* SoicalMediaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3AA2A61BE3200CB5700 /* SoicalMediaButtons.swift */; };
+		E95BB3AD2A61EA1B00CB5700 /* ForgetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3AC2A61EA1B00CB5700 /* ForgetPasswordScreen.swift */; };
+		E95BB3AF2A62F51100CB5700 /* VerifyCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3AE2A62F51100CB5700 /* VerifyCodeScreen.swift */; };
+		E95BB3B12A630CDE00CB5700 /* RecoverPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3B02A630CDE00CB5700 /* RecoverPasswordScreen.swift */; };
+		E95BB3B32A6350AD00CB5700 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3B22A6350AD00CB5700 /* SignUpScreen.swift */; };
+		E95BB3B52A6352CD00CB5700 /* SignUpSocailMediaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3B42A6352CD00CB5700 /* SignUpSocailMediaScreen.swift */; };
+		E95BB3B72A636E8000CB5700 /* SignUpCategoryScreen..swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3B62A636E8000CB5700 /* SignUpCategoryScreen..swift */; };
+		E95BB3B92A63727E00CB5700 /* SignUpArtistScreen_.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3B82A63727E00CB5700 /* SignUpArtistScreen_.swift */; };
+		E95BB3BB2A63782F00CB5700 /* AccountCreatedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB3BA2A63782F00CB5700 /* AccountCreatedScreen.swift */; };
+		E95BB3E22A63BAC800CB5700 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3BE2A63BAC700CB5700 /* OpenSans-Bold.ttf */; };
+		E95BB3E32A63BAC800CB5700 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3BF2A63BAC700CB5700 /* OpenSans-ExtraBold.ttf */; };
+		E95BB3E42A63BAC800CB5700 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3C02A63BAC700CB5700 /* OpenSans-Light.ttf */; };
+		E95BB3E72A63BAC800CB5700 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3C32A63BAC700CB5700 /* OpenSans-Medium.ttf */; };
+		E95BB3E82A63BAC800CB5700 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3C42A63BAC700CB5700 /* OpenSans-Italic.ttf */; };
+		E95BB3EC2A63BAC800CB5700 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3C82A63BAC700CB5700 /* OpenSans-SemiBold.ttf */; };
+		E95BB3F22A63BAC800CB5700 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3CE2A63BAC800CB5700 /* OpenSans-BoldItalic.ttf */; };
+		E95BB3FA2A63BAC800CB5700 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3D62A63BAC800CB5700 /* OpenSans-Regular.ttf */; };
+		E95BB3FB2A63BAC800CB5700 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3D72A63BAC800CB5700 /* OpenSans-ExtraBoldItalic.ttf */; };
+		E95BB4002A63BAC800CB5700 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3DC2A63BAC800CB5700 /* OpenSans-LightItalic.ttf */; };
+		E95BB4032A63BAC800CB5700 /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3DF2A63BAC800CB5700 /* OpenSans-MediumItalic.ttf */; };
+		E95BB4042A63BAC800CB5700 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E95BB3E02A63BAC800CB5700 /* OpenSans-SemiBoldItalic.ttf */; };
+		E95BB40A2A64450900CB5700 /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4092A64450900CB5700 /* SkipButton.swift */; };
+		E95BB40C2A64483800CB5700 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB40B2A64483800CB5700 /* CustomButton.swift */; };
+		E95BB40E2A644B4700CB5700 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB40D2A644B4700CB5700 /* TextButton.swift */; };
+		E95BB4102A644BE700CB5700 /* FullHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB40F2A644BE700CB5700 /* FullHStack.swift */; };
+		E95BB4122A644D1800CB5700 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4112A644D1800CB5700 /* String.swift */; };
+		E95BB4142A644F2900CB5700 /* OnboardingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4132A644F2900CB5700 /* OnboardingHeader.swift */; };
+		E95BB4162A64504B00CB5700 /* CustomTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4152A64504B00CB5700 /* CustomTextFiled.swift */; };
+		E95BB4192A64521000CB5700 /* AppRegx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4182A64521000CB5700 /* AppRegx.swift */; };
+		E95BB41B2A645BAC00CB5700 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB41A2A645BAC00CB5700 /* CustomToggle.swift */; };
+		E95BB41D2A645E0100CB5700 /* CustomForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB41C2A645E0100CB5700 /* CustomForm.swift */; };
+		E95BB41F2A649C5400CB5700 /* SignUpOnboardinHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB41E2A649C5400CB5700 /* SignUpOnboardinHeader.swift */; };
+		E95BB4222A657A0500CB5700 /* MainHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4212A657A0500CB5700 /* MainHomeScreen.swift */; };
+		E95BB4812A73317400CB5700 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4802A73317400CB5700 /* View.swift */; };
+		E95BB4832A73319800CB5700 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BB4822A73319800CB5700 /* NavigationManager.swift */; };
 		E97C5A6B2A5F5A9C0016D646 /* calmoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A6A2A5F5A9C0016D646 /* calmoApp.swift */; };
 		E97C5A6D2A5F5A9C0016D646 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A6C2A5F5A9C0016D646 /* ContentView.swift */; };
 		E97C5A6F2A5F5A9E0016D646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97C5A6E2A5F5A9E0016D646 /* Assets.xcassets */; };
 		E97C5A722A5F5A9E0016D646 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97C5A712A5F5A9E0016D646 /* Preview Assets.xcassets */; };
+		E97C5A7E2A60387B0016D646 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A7D2A60387B0016D646 /* SplashScreen.swift */; };
+		E97C5A812A603E090016D646 /* AppBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A802A603E090016D646 /* AppBody.swift */; };
+		E97C5A842A603EF70016D646 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A832A603EF70016D646 /* AppTheme.swift */; };
+		E97C5A872A606F9B0016D646 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A862A606F9B0016D646 /* Color.swift */; };
+		E97C5A892A6080350016D646 /* UIPilot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A882A6080350016D646 /* UIPilot.swift */; };
+		E97C5A8B2A6080670016D646 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5A8A2A6080670016D646 /* OnboardingScreen.swift */; };
+		EF9A1897EB5A8785969B53AD /* Pods_calmo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55D269E4DA8E5C3792416AC6 /* Pods-calmo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calmo.debug.xcconfig"; path = "Target Support Files/Pods-calmo/Pods-calmo.debug.xcconfig"; sourceTree = "<group>"; };
+		9D1AB5A4B96E80C6B28E97EB /* Pods-calmo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calmo.release.xcconfig"; path = "Target Support Files/Pods-calmo/Pods-calmo.release.xcconfig"; sourceTree = "<group>"; };
+		E95BB3A62A60F0FC00CB5700 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		E95BB3A82A60FCC900CB5700 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		E95BB3AA2A61BE3200CB5700 /* SoicalMediaButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoicalMediaButtons.swift; sourceTree = "<group>"; };
+		E95BB3AC2A61EA1B00CB5700 /* ForgetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordScreen.swift; sourceTree = "<group>"; };
+		E95BB3AE2A62F51100CB5700 /* VerifyCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeScreen.swift; sourceTree = "<group>"; };
+		E95BB3B02A630CDE00CB5700 /* RecoverPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordScreen.swift; sourceTree = "<group>"; };
+		E95BB3B22A6350AD00CB5700 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		E95BB3B42A6352CD00CB5700 /* SignUpSocailMediaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSocailMediaScreen.swift; sourceTree = "<group>"; };
+		E95BB3B62A636E8000CB5700 /* SignUpCategoryScreen..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCategoryScreen..swift; sourceTree = "<group>"; };
+		E95BB3B82A63727E00CB5700 /* SignUpArtistScreen_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpArtistScreen_.swift; sourceTree = "<group>"; };
+		E95BB3BA2A63782F00CB5700 /* AccountCreatedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreatedScreen.swift; sourceTree = "<group>"; };
+		E95BB3BE2A63BAC700CB5700 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E95BB3BF2A63BAC700CB5700 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E95BB3C02A63BAC700CB5700 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		E95BB3C32A63BAC700CB5700 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		E95BB3C42A63BAC700CB5700 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		E95BB3C82A63BAC700CB5700 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E95BB3CE2A63BAC800CB5700 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E95BB3D62A63BAC800CB5700 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E95BB3D72A63BAC800CB5700 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E95BB3DC2A63BAC800CB5700 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E95BB3DF2A63BAC800CB5700 /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E95BB3E02A63BAC800CB5700 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E95BB4052A63BC1800CB5700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E95BB4092A64450900CB5700 /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
+		E95BB40B2A64483800CB5700 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E95BB40D2A644B4700CB5700 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		E95BB40F2A644BE700CB5700 /* FullHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullHStack.swift; sourceTree = "<group>"; };
+		E95BB4112A644D1800CB5700 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E95BB4132A644F2900CB5700 /* OnboardingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeader.swift; sourceTree = "<group>"; };
+		E95BB4152A64504B00CB5700 /* CustomTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFiled.swift; sourceTree = "<group>"; };
+		E95BB4182A64521000CB5700 /* AppRegx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRegx.swift; sourceTree = "<group>"; };
+		E95BB41A2A645BAC00CB5700 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
+		E95BB41C2A645E0100CB5700 /* CustomForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForm.swift; sourceTree = "<group>"; };
+		E95BB41E2A649C5400CB5700 /* SignUpOnboardinHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOnboardinHeader.swift; sourceTree = "<group>"; };
+		E95BB4212A657A0500CB5700 /* MainHomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeScreen.swift; sourceTree = "<group>"; };
+		E95BB4802A73317400CB5700 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E95BB4822A73319800CB5700 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		E97C5A672A5F5A9C0016D646 /* calmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C5A6A2A5F5A9C0016D646 /* calmoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calmoApp.swift; sourceTree = "<group>"; };
 		E97C5A6C2A5F5A9C0016D646 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E97C5A6E2A5F5A9E0016D646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E97C5A712A5F5A9E0016D646 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E97C5A7D2A60387B0016D646 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		E97C5A802A603E090016D646 /* AppBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBody.swift; sourceTree = "<group>"; };
+		E97C5A832A603EF70016D646 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E97C5A862A606F9B0016D646 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E97C5A882A6080350016D646 /* UIPilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPilot.swift; sourceTree = "<group>"; };
+		E97C5A8A2A6080670016D646 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calmo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +117,83 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9A1897EB5A8785969B53AD /* Pods_calmo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDCAC4902D09E2784ED080E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55D269E4DA8E5C3792416AC6 /* Pods-calmo.debug.xcconfig */,
+				9D1AB5A4B96E80C6B28E97EB /* Pods-calmo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB9E3DB3BA6E9859AF64EA86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E95BB3BC2A63BA2B00CB5700 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB3BE2A63BAC700CB5700 /* OpenSans-Bold.ttf */,
+				E95BB3CE2A63BAC800CB5700 /* OpenSans-BoldItalic.ttf */,
+				E95BB3BF2A63BAC700CB5700 /* OpenSans-ExtraBold.ttf */,
+				E95BB3D72A63BAC800CB5700 /* OpenSans-ExtraBoldItalic.ttf */,
+				E95BB3C42A63BAC700CB5700 /* OpenSans-Italic.ttf */,
+				E95BB3C02A63BAC700CB5700 /* OpenSans-Light.ttf */,
+				E95BB3DC2A63BAC800CB5700 /* OpenSans-LightItalic.ttf */,
+				E95BB3C32A63BAC700CB5700 /* OpenSans-Medium.ttf */,
+				E95BB3DF2A63BAC800CB5700 /* OpenSans-MediumItalic.ttf */,
+				E95BB3D62A63BAC800CB5700 /* OpenSans-Regular.ttf */,
+				E95BB3C82A63BAC700CB5700 /* OpenSans-SemiBold.ttf */,
+				E95BB3E02A63BAC800CB5700 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		E95BB4082A6444E400CB5700 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB4092A64450900CB5700 /* SkipButton.swift */,
+				E95BB40B2A64483800CB5700 /* CustomButton.swift */,
+				E95BB40D2A644B4700CB5700 /* TextButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E95BB4172A64520400CB5700 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB4182A64521000CB5700 /* AppRegx.swift */,
+				E95BB4822A73319800CB5700 /* NavigationManager.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E95BB4202A6579ED00CB5700 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB4212A657A0500CB5700 /* MainHomeScreen.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		E97C5A5E2A5F5A9C0016D646 = {
 			isa = PBXGroup;
 			children = (
 				E97C5A692A5F5A9C0016D646 /* calmo */,
 				E97C5A682A5F5A9C0016D646 /* Products */,
+				BDCAC4902D09E2784ED080E1 /* Pods */,
+				DB9E3DB3BA6E9859AF64EA86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +208,11 @@
 		E97C5A692A5F5A9C0016D646 /* calmo */ = {
 			isa = PBXGroup;
 			children = (
+				E95BB4172A64520400CB5700 /* utils */,
+				E95BB4052A63BC1800CB5700 /* Info.plist */,
+				E95BB3BC2A63BA2B00CB5700 /* fonts */,
+				E97C5A852A606F820016D646 /* extensions */,
+				E97C5A7B2A60385A0016D646 /* screens */,
 				E97C5A6A2A5F5A9C0016D646 /* calmoApp.swift */,
 				E97C5A6C2A5F5A9C0016D646 /* ContentView.swift */,
 				E97C5A6E2A5F5A9E0016D646 /* Assets.xcassets */,
@@ -67,6 +229,71 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E97C5A7B2A60385A0016D646 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB4202A6579ED00CB5700 /* home */,
+				E97C5A822A603EE90016D646 /* Themeing */,
+				E97C5A7F2A603DF80016D646 /* Components */,
+				E97C5A7C2A6038650016D646 /* onboarding */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		E97C5A7C2A6038650016D646 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E97C5A7D2A60387B0016D646 /* SplashScreen.swift */,
+				E97C5A8A2A6080670016D646 /* OnboardingScreen.swift */,
+				E95BB3A62A60F0FC00CB5700 /* SignInScreen.swift */,
+				E95BB3AC2A61EA1B00CB5700 /* ForgetPasswordScreen.swift */,
+				E95BB3AE2A62F51100CB5700 /* VerifyCodeScreen.swift */,
+				E95BB3B02A630CDE00CB5700 /* RecoverPasswordScreen.swift */,
+				E95BB3B22A6350AD00CB5700 /* SignUpScreen.swift */,
+				E95BB3B42A6352CD00CB5700 /* SignUpSocailMediaScreen.swift */,
+				E95BB3B62A636E8000CB5700 /* SignUpCategoryScreen..swift */,
+				E95BB3B82A63727E00CB5700 /* SignUpArtistScreen_.swift */,
+				E95BB3BA2A63782F00CB5700 /* AccountCreatedScreen.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		E97C5A7F2A603DF80016D646 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E95BB4082A6444E400CB5700 /* Buttons */,
+				E97C5A802A603E090016D646 /* AppBody.swift */,
+				E95BB3A82A60FCC900CB5700 /* CustomNavBar.swift */,
+				E95BB3AA2A61BE3200CB5700 /* SoicalMediaButtons.swift */,
+				E95BB40F2A644BE700CB5700 /* FullHStack.swift */,
+				E95BB4132A644F2900CB5700 /* OnboardingHeader.swift */,
+				E95BB4152A64504B00CB5700 /* CustomTextFiled.swift */,
+				E95BB41A2A645BAC00CB5700 /* CustomToggle.swift */,
+				E95BB41C2A645E0100CB5700 /* CustomForm.swift */,
+				E95BB41E2A649C5400CB5700 /* SignUpOnboardinHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E97C5A822A603EE90016D646 /* Themeing */ = {
+			isa = PBXGroup;
+			children = (
+				E97C5A832A603EF70016D646 /* AppTheme.swift */,
+			);
+			path = Themeing;
+			sourceTree = "<group>";
+		};
+		E97C5A852A606F820016D646 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E97C5A862A606F9B0016D646 /* Color.swift */,
+				E97C5A882A6080350016D646 /* UIPilot.swift */,
+				E95BB4112A644D1800CB5700 /* String.swift */,
+				E95BB4802A73317400CB5700 /* View.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +301,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E97C5A752A5F5A9E0016D646 /* Build configuration list for PBXNativeTarget "calmo" */;
 			buildPhases = (
+				C4BF82F0B22B80164A9A91F7 /* [CP] Check Pods Manifest.lock */,
 				E97C5A632A5F5A9C0016D646 /* Sources */,
 				E97C5A642A5F5A9C0016D646 /* Frameworks */,
 				E97C5A652A5F5A9C0016D646 /* Resources */,
+				09A6AC93C6B28C7CDE1A4E27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,20 +354,105 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95BB3E42A63BAC800CB5700 /* OpenSans-Light.ttf in Resources */,
+				E95BB3EC2A63BAC800CB5700 /* OpenSans-SemiBold.ttf in Resources */,
+				E95BB4042A63BAC800CB5700 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				E95BB4032A63BAC800CB5700 /* OpenSans-MediumItalic.ttf in Resources */,
 				E97C5A722A5F5A9E0016D646 /* Preview Assets.xcassets in Resources */,
 				E97C5A6F2A5F5A9E0016D646 /* Assets.xcassets in Resources */,
+				E95BB4002A63BAC800CB5700 /* OpenSans-LightItalic.ttf in Resources */,
+				E95BB3E82A63BAC800CB5700 /* OpenSans-Italic.ttf in Resources */,
+				E95BB3FA2A63BAC800CB5700 /* OpenSans-Regular.ttf in Resources */,
+				E95BB3E22A63BAC800CB5700 /* OpenSans-Bold.ttf in Resources */,
+				E95BB3F22A63BAC800CB5700 /* OpenSans-BoldItalic.ttf in Resources */,
+				E95BB3E72A63BAC800CB5700 /* OpenSans-Medium.ttf in Resources */,
+				E95BB3FB2A63BAC800CB5700 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				E95BB3E32A63BAC800CB5700 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A6AC93C6B28C7CDE1A4E27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-calmo/Pods-calmo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-calmo/Pods-calmo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-calmo/Pods-calmo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4BF82F0B22B80164A9A91F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-calmo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E97C5A632A5F5A9C0016D646 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95BB4812A73317400CB5700 /* View.swift in Sources */,
+				E95BB40E2A644B4700CB5700 /* TextButton.swift in Sources */,
+				E95BB41F2A649C5400CB5700 /* SignUpOnboardinHeader.swift in Sources */,
+				E97C5A7E2A60387B0016D646 /* SplashScreen.swift in Sources */,
+				E95BB4162A64504B00CB5700 /* CustomTextFiled.swift in Sources */,
+				E95BB3AB2A61BE3200CB5700 /* SoicalMediaButtons.swift in Sources */,
 				E97C5A6D2A5F5A9C0016D646 /* ContentView.swift in Sources */,
+				E95BB4222A657A0500CB5700 /* MainHomeScreen.swift in Sources */,
+				E95BB3A72A60F0FD00CB5700 /* SignInScreen.swift in Sources */,
+				E95BB3B72A636E8000CB5700 /* SignUpCategoryScreen..swift in Sources */,
+				E95BB4122A644D1800CB5700 /* String.swift in Sources */,
+				E95BB4832A73319800CB5700 /* NavigationManager.swift in Sources */,
+				E95BB4142A644F2900CB5700 /* OnboardingHeader.swift in Sources */,
+				E95BB41D2A645E0100CB5700 /* CustomForm.swift in Sources */,
+				E95BB40A2A64450900CB5700 /* SkipButton.swift in Sources */,
 				E97C5A6B2A5F5A9C0016D646 /* calmoApp.swift in Sources */,
+				E95BB3B32A6350AD00CB5700 /* SignUpScreen.swift in Sources */,
+				E95BB3A92A60FCC900CB5700 /* CustomNavBar.swift in Sources */,
+				E97C5A812A603E090016D646 /* AppBody.swift in Sources */,
+				E97C5A8B2A6080670016D646 /* OnboardingScreen.swift in Sources */,
+				E95BB4102A644BE700CB5700 /* FullHStack.swift in Sources */,
+				E95BB40C2A64483800CB5700 /* CustomButton.swift in Sources */,
+				E95BB3B92A63727E00CB5700 /* SignUpArtistScreen_.swift in Sources */,
+				E95BB3B52A6352CD00CB5700 /* SignUpSocailMediaScreen.swift in Sources */,
+				E97C5A842A603EF70016D646 /* AppTheme.swift in Sources */,
+				E95BB3B12A630CDE00CB5700 /* RecoverPasswordScreen.swift in Sources */,
+				E95BB4192A64521000CB5700 /* AppRegx.swift in Sources */,
+				E95BB41B2A645BAC00CB5700 /* CustomToggle.swift in Sources */,
+				E97C5A892A6080350016D646 /* UIPilot.swift in Sources */,
+				E97C5A872A606F9B0016D646 /* Color.swift in Sources */,
+				E95BB3AF2A62F51100CB5700 /* VerifyCodeScreen.swift in Sources */,
+				E95BB3BB2A63782F00CB5700 /* AccountCreatedScreen.swift in Sources */,
+				E95BB3AD2A61EA1B00CB5700 /* ForgetPasswordScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +575,7 @@
 		};
 		E97C5A762A5F5A9E0016D646 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D269E4DA8E5C3792416AC6 /* Pods-calmo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +585,7 @@
 				DEVELOPMENT_TEAM = NDWGY9K2GB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = calmo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +606,7 @@
 		};
 		E97C5A772A5F5A9E0016D646 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D1AB5A4B96E80C6B28E97EB /* Pods-calmo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +616,7 @@
 				DEVELOPMENT_TEAM = NDWGY9K2GB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = calmo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
