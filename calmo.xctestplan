@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "4770244A-7448-44B6-9F75-4E75D615D86F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:calmo.xcodeproj",
+      "identifier" : "E97C5A662A5F5A9C0016D646",
+      "name" : "calmo"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:calmo.xcodeproj",
+        "identifier" : "E9DBB7202A9211BF00E3A4CD",
+        "name" : "calmoUnitTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:calmo.xcodeproj",
+        "identifier" : "E9DBB72D2A92122D00E3A4CD",
+        "name" : "calmoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

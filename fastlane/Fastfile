@@ -20,9 +20,8 @@ platform :ios do
 
   desc "Run UI TESTING ---->"
   lane :tests do
-    run_tests(workspace: "calmo.xcworkspace",
-      devices: ["iPhone 14"],
-      scheme: "calmoUnitTests")
+    run_tests(
+      scheme: "calmo")
   end
 
 
