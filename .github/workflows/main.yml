@@ -1,12 +1,12 @@
-name: Run Fastlane Unit Tests
+name: Run iOS UI Tests
 
 on:
   pull_request:
     branches:
-      - develop
+      - main # Adjust this as per your branch
 
 jobs:
-  test:
+  ui-tests:
     runs-on: macOS-latest
 
     steps:
@@ -23,6 +23,13 @@ jobs:
         gem install bundler
         bundle install --without=documentation --path vendor/bundle
 
-    - name: Run Fastlane Unit Tests
+    - name: Select Xcode Version
+      run: sudo xcode-select -s '/Applications/Xcode_13.app' # Adjust the Xcode version as needed
+
+    - name: Preboot simulator
       run: |
-        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
+        xcrun simctl boot "iPhone 14" # Make sure the device matches your configuration
+
+    - name: Run UI Tests
+      run: |
+        bundle exec fastlane scan --scheme "calmo" # Adjust the scheme as per your configuration
