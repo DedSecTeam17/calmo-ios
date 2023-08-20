@@ -21,7 +21,10 @@ platform :ios do
   desc "Run UI TESTING ---->"
   lane :tests do
     run_tests(
-      scheme: "calmo")
+      scheme: "calmo",
+      device: "iPhone 14"
+    
+    )
   end
 
 
