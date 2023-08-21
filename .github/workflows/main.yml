@@ -17,14 +17,26 @@ jobs:
     - name: XCODE VERSION 
       run: xcodebuild -version
 
+     
+
+    - name: BOOT iphone 14
+      run:  xcrun simctl boot "iPhone 14"
+      
+    - name: Clone and Boot iOS Simulator
+      run: |
+        # Create a new simulator clone
+        SIMULATOR_NAME="clone-simulator"
+        DEVICE_TYPE="com.apple.CoreSimulator.SimDeviceType.iPhone-14"
+        RUNTIME_ID=$(xcrun simctl list runtimes | grep -o "iOS [0-9]*\.[0-9]*" | tail -1 | sed -e "s/ /-/g")
+        SIMULATOR_ID=$(xcrun simctl create $SIMULATOR_NAME $DEVICE_TYPE $RUNTIME_ID)
+
+        # Boot the cloned simulator
+        xcrun simctl boot $SIMULATOR_ID
+
+
+
     - name: List Available Simulators
-      run: xcrun simctl list devices      
-
-    - name: BOOT SIM
-      run:  xcrun simctl boot "iPhone 14"       
-
-
-
+      run: xcrun simctl list devices 
 
 
     - name: Set up Ruby
