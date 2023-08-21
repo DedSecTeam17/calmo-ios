@@ -20,13 +20,23 @@ platform :ios do
 
   desc "Run UI TESTING ---->"
   lane :tests do
+    # run_tests(
+    #   workspace: "calmo.xcworkspace",
+    #   scheme: "calmoUITests",
+    #   destination
+    #   devices: ["iPhone 14"],
+    #   clean: true
+    # )
     scan(
+      scheme: "calmoUITests",
       workspace: "calmo.xcworkspace",
-      scheme: "calmo",
-      devices: ["iPhone 14"]
+      destination: "platform=iOS Simulator,name=iPhone 14,OS=latest"
     )
+
   end
 
+
+  # xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -workspace calmo.xcworkspace
 
 
 

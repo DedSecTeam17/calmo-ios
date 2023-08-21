@@ -22,36 +22,29 @@ jobs:
     - name: BOOT iphone 14
       run:  xcrun simctl boot "iPhone 14"
       
-    - name: Clone and Boot iOS Simulator
-      run: |
-        # Create a new simulator clone
-        SIMULATOR_NAME="clone-simulator"
-        DEVICE_TYPE="com.apple.CoreSimulator.SimDeviceType.iPhone-14"
-        RUNTIME_ID=$(xcrun simctl list runtimes | grep -o "iOS [0-9]*\.[0-9]*" | tail -1 | sed -e "s/ /-/g")
-        SIMULATOR_ID=$(xcrun simctl create $SIMULATOR_NAME $DEVICE_TYPE $RUNTIME_ID)
+    - name: RUN UI TESTS
+      run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' -workspace calmo.xcworkspace
 
-        # Boot the cloned simulator
-        xcrun simctl boot $SIMULATOR_ID
-
-
+    - name: RUN UNIT TESTS
+      run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' -workspace calmo.xcworkspace
 
     - name: List Available Simulators
       run: xcrun simctl list devices 
 
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.2 # You can specify the Ruby version you need
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.7.2 # You can specify the Ruby version you need
         
         
 
 
-    - name: Install Bundler and Fastlane
-      run: |
-        gem install bundler
-        bundle install --without=documentation --path vendor/bundle
+    # - name: Install Bundler and Fastlane
+    #   run: |
+    #     gem install bundler
+    #     bundle install --without=documentation --path vendor/bundle
 
-    - name: Run Fastlane Unit Tests
-      run: |
-        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
+    # - name: Run Fastlane Unit Tests
+    #   run: |
+    #     bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
