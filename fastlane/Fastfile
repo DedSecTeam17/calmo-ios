@@ -22,8 +22,8 @@ platform :ios do
   lane :tests do
     scan(
       workspace: "calmo.xcworkspace",
-      scheme: "calmoUITests",
-      devices: ["iPhone 12"]
+      scheme: "calmo",
+      devices: ["iPhone 14"]
     )
   end
 

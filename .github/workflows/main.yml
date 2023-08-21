@@ -17,11 +17,13 @@ jobs:
     - name: XCODE VERSION 
       run: xcodebuild -version
 
-    - name: BOOT SIM
-      run:  xcrun simctl boot "iPhone 12"       
-
     - name: List Available Simulators
-      run: xcrun simctl list devices
+      run: xcrun simctl list devices      
+
+    - name: BOOT SIM
+      run:  xcrun simctl boot "iPhone 14"       
+
+
 
 
 
