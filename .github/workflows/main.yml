@@ -18,7 +18,7 @@ jobs:
       run: xcodebuild -version
 
     - name: BOOT SIM
-      run:  xcrun simctl boot "iPhone 8"       
+      run:  xcrun simctl boot "iPhone 12"       
 
     - name: List Available Simulators
       run: xcrun simctl list devices
