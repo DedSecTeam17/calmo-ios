@@ -23,7 +23,7 @@ platform :ios do
     scan(
       workspace: "calmo.xcworkspace",
       scheme: "calmo",
-      devices: ["iPhone 14"]
+      devices: ["iPhone 8"]
     )
   end
 
