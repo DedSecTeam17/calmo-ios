@@ -20,11 +20,15 @@ jobs:
     - name: install pods
       run: pod install
 
+    - name: List Available Simulators
+      run: xcrun simctl list devices 
+      
+
     - name: BOOT iphone 14
       run:  xcrun simctl boot "iPhone 14"
 
     - name: BOOT iPhone SE
-      run: ixcrun simctl boot "iPhone SE (3rd generation)"
+      run: ixcrun simctl boot "iPhone 14"
 
       
     # - name: RUN UI TESTS
