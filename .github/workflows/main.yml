@@ -23,7 +23,7 @@ jobs:
     - name: BOOT iphone 14
       run:  xcrun simctl boot "iPhone 14"
 
-    - name : BOOT iPhone SE
+    - name: BOOT iPhone SE
       run: ixcrun simctl boot iPhone SE (3rd generation)
 
       
