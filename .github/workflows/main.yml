@@ -17,34 +17,39 @@ jobs:
     - name: XCODE VERSION 
       run: xcodebuild -version
 
-     
+    - name: install pods
+      run: pod install
 
     - name: BOOT iphone 14
       run:  xcrun simctl boot "iPhone 14"
-      
-    - name: RUN UI TESTS
-      run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
 
-    - name: RUN UNIT TESTS
-      run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
+    - name : BOOT iPhone SE
+      run: ixcrun simctl boot Phone SE (3rd generation)
+
+      
+    # - name: RUN UI TESTS
+    #   run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
+
+    # - name: RUN UNIT TESTS
+    #   run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
 
     - name: List Available Simulators
       run: xcrun simctl list devices 
 
 
-    # - name: Set up Ruby
-    #   uses: ruby/setup-ruby@v1
-    #   with:
-    #     ruby-version: 2.7.2 # You can specify the Ruby version you need
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2 # You can specify the Ruby version you need
         
         
 
 
-    # - name: Install Bundler and Fastlane
-    #   run: |
-    #     gem install bundler
-    #     bundle install --without=documentation --path vendor/bundle
+    - name: Install Bundler and Fastlane
+      run: |
+        gem install bundler
+        bundle install --without=documentation --path vendor/bundle
 
-    # - name: Run Fastlane Unit Tests
-    #   run: |
-    #     bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
+    - name: Run Fastlane Unit Tests
+      run: |
+        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
