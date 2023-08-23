@@ -17,22 +17,7 @@
     }
   },
   "testTargets" : [
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:calmo.xcodeproj",
-        "identifier" : "E9DBB7202A9211BF00E3A4CD",
-        "name" : "calmoUnitTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:calmo.xcodeproj",
-        "identifier" : "E9DBB72D2A92122D00E3A4CD",
-        "name" : "calmoUITests"
-      }
-    }
+
   ],
   "version" : 1
 }

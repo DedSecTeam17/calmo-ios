@@ -19,20 +19,21 @@ platform :ios do
 
 
   desc "Run UI TESTING ---->"
-  lane :tests do
-    run_tests(
+  lane :tests_unit do
+    scan(
+      scheme: "calmoUnitTests",
       workspace: "calmo.xcworkspace",
-      scheme: "calmo",
-      
-      devices: ["iPhone SE (3rd generation)","iPhone 14"],
-      clean: true
+      devices: ["iPhone 14"]
     )
-    # scan(
-    #   scheme: "calmoTests",
-    #   workspace: "calmo.xcworkspace",
-    #   destination: "platform=iOS Simulator,name=iPhone SE (3rd generation) (16.4),OS=latest"
-    # )
+  end
 
+  desc "Run UNIT TESTING ---->"
+  lane :tests_ui do
+    scan(
+      scheme: "calmoUITests",
+      workspace: "calmo.xcworkspace",
+      devices: ["iPhone 14"]
+    )
   end
 
 

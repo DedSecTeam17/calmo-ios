@@ -24,14 +24,8 @@ jobs:
       run:  xcrun simctl boot "iPhone 14"
 
     - name : BOOT iPhone SE
-      run: ixcrun simctl boot iPhone SE (3rd generation)
+      run: xcrun simctl boot "iPhone SE (3rd generation)"
 
-      
-    # - name: RUN UI TESTS
-    #   run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
-
-    # - name: RUN UNIT TESTS
-    #   run: xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 14' -workspace calmo.xcworkspace
 
     - name: List Available Simulators
       run: xcrun simctl list devices 
@@ -41,9 +35,6 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.2 # You can specify the Ruby version you need
-        
-        
-
 
     - name: Install Bundler and Fastlane
       run: |
@@ -52,4 +43,8 @@ jobs:
 
     - name: Run Fastlane Unit Tests
       run: |
-        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
+        bundle exec fastlane tests_unit # Make sure to define the "tests" lane in your Fastfile
+
+    - name: Run Fastlane UI Tests
+      run: |
+        bundle exec fastlane tests_ui # Make sure to define the "tests" lane in your Fastfile
