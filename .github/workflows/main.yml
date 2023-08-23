@@ -20,6 +20,10 @@ jobs:
     - name: install pods
       run: pod install
 
+    - name: List Available Simulators
+      run: xcrun simctl list devices 
+      
+
     - name: BOOT iphone 14
       run:  xcrun simctl boot "iPhone 14"
 
