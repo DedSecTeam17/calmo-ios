@@ -1,2 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites tests='0' failures='0'/>
+<testsuites name='calmoUnitTests.xctest' tests='9' failures='0'>
+  <testsuite name='calmoTests.calmoTests' tests='2' failures='0'>
+    <testcase classname='calmoTests.calmoTests' name='testExample' time='0.001'/>
+    <testcase classname='calmoTests.calmoTests' name='testPerformanceExample' time='0.357'/>
+  </testsuite>
+  <testsuite name='calmoUITests.calmoUITests' tests='1' failures='0'>
+    <testcase classname='calmoUITests.calmoUITests' name='testOnboardingFlow' time='3.107'/>
+  </testsuite>
+  <testsuite name='calmoUITests.calmoUITestsLaunchTests' tests='4' failures='0'>
+    <testcase classname='calmoUITests.calmoUITestsLaunchTests' name='testLaunch' time='3.908'/>
+    <testcase classname='calmoUITests.calmoUITestsLaunchTests' name='testLaunch' time='5.412'/>
+    <testcase classname='calmoUITests.calmoUITestsLaunchTests' name='testLaunch' time='3.747'/>
+    <testcase classname='calmoUITests.calmoUITestsLaunchTests' name='testLaunch' time='5.520'/>
+  </testsuite>
+  <testsuite name='calmoUnitTests.calmoUnitTests' tests='2' failures='0'>
+    <testcase classname='calmoUnitTests.calmoUnitTests' name='testFunction2' time='0.001'/>
+    <testcase classname='calmoUnitTests.calmoUnitTests' name='testFunction' time='0.000'/>
+  </testsuite>
+</testsuites>

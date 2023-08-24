@@ -1,0 +1,5 @@
+coverage_service: html
+xcodeproj: calmo.xcworkspace
+scheme: calmo
+workspace: calmo.xcworkspace
+output_directory: fastlane/code_coverage

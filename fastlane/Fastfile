@@ -18,24 +18,15 @@ default_platform(:ios)
 platform :ios do
 
 
-  desc "Run UI TESTING ---->"
-  lane :tests_unit do
+  desc "Unit & UI testin"
+  lane :tests do
     scan(
-      scheme: "calmoUnitTests",
+      scheme: "calmo",
       workspace: "calmo.xcworkspace",
       devices: ["iPhone 14"]
     )
+    publish_code_covrage
   end
-
-  desc "Run UNIT TESTING ---->"
-  lane :tests_ui do
-    scan(
-      scheme: "calmoUITests",
-      workspace: "calmo.xcworkspace",
-      devices: ["iPhone 14"]
-    )
-  end
-
 
   # xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -workspace calmo.xcworkspace
 

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Color.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "Color.swift" : </span><span>Lines: </span><span class="cov_high">87.50%</span><span> Branches: </span><span class="cov_medium">75.00%</span>
+</h2>
+<h4 class="cov_subtitle">(21 of 24 relevant lines covered)</h4>
+<h4 class="cov_filepath">calmo/extensions/Color.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc">//  Color.swift</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">//  calmo</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">//  Created by Mohammed Elamin on 13/07/2023.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">import Foundation</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">import SwiftUI</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc">extension Color {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="covered">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">    init(hex: String) {</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc">        var int: UInt64 = 0</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">        Scanner(string: hex).scanHexInt64(&amp;int)</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc">        let a, r, g, b: UInt64</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">        switch hex.count {</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">        </code><code class="objc missed">case 3: // RGB (12-bit)</code><code class="objc"></code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="missed">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">            (a, r, g, b) = (255, (int &gt;&gt; 8) * 17, (int &gt;&gt; 4 &amp; 0xF) * 17, (int &amp; 0xF) * 17)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">        case 6: // RGB (24-bit)</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc">            (a, r, g, b) = (255, int &gt;&gt; 16, int &gt;&gt; 8 &amp; 0xFF, int &amp; 0xFF)</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">        </code><code class="objc missed">case 8: // ARGB (32-bit)</code><code class="objc"></code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="missed">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">            (a, r, g, b) = (int &gt;&gt; 24, int &gt;&gt; 16 &amp; 0xFF, int &gt;&gt; 8 &amp; 0xFF, int &amp; 0xFF)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc">        </code><code class="objc missed">default:</code><code class="objc"></code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="missed">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">            (a, r, g, b) = (1, 1, 1, 0)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="covered">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">        self.init(</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">            .sRGB,</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc">            red: Double(r) / 255,</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc">            green: Double(g) / 255,</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc">            blue:  Double(b) / 255,</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc">            opacity: Double(a) / 255</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">        )</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="covered">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">10x</td>
+</tr>
+<tr class="never">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2023 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
