@@ -45,6 +45,8 @@ jobs:
     #     bundle install --without=documentation --path vendor/bundle
 
     - name: Run Fastlane Unit Tests
-      run: |
-        bundle exec fastlane tests # Make sure to define the "tests" lane in your Fastfile
+      run: fastlane tests
+      env: 
+        REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}  
+        TARGET_COVERAGE: ${{ secrets.TARGET_COVERAGE }}  
 
