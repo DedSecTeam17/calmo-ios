@@ -60,6 +60,7 @@
 		E9DBB7312A92122D00E3A4CD /* calmoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB7302A92122D00E3A4CD /* calmoUITests.swift */; };
 		E9DBB7332A92122D00E3A4CD /* calmoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB7322A92122D00E3A4CD /* calmoUITestsLaunchTests.swift */; };
 		E9DBB7402A94D76F00E3A4CD /* calmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB73F2A94D76F00E3A4CD /* calmoTests.swift */; };
+		E9DBB7472A98044700E3A4CD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB7462A98044700E3A4CD /* SnapshotHelper.swift */; };
 		EF9A1897EB5A8785969B53AD /* Pods_calmo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		E9DBB7322A92122D00E3A4CD /* calmoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calmoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9DBB73D2A94D76F00E3A4CD /* calmoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calmoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBB73F2A94D76F00E3A4CD /* calmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calmoTests.swift; sourceTree = "<group>"; };
+		E9DBB7462A98044700E3A4CD /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		F0F272E4A49D4BAF435F90D8 /* Pods-calmoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calmoUITests.debug.xcconfig"; path = "Target Support Files/Pods-calmoUITests/Pods-calmoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calmo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -385,6 +387,7 @@
 			children = (
 				E9DBB7302A92122D00E3A4CD /* calmoUITests.swift */,
 				E9DBB7322A92122D00E3A4CD /* calmoUITestsLaunchTests.swift */,
+				E9DBB7462A98044700E3A4CD /* SnapshotHelper.swift */,
 			);
 			path = calmoUITests;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 			files = (
 				E9DBB7312A92122D00E3A4CD /* calmoUITests.swift in Sources */,
 				E9DBB7332A92122D00E3A4CD /* calmoUITestsLaunchTests.swift in Sources */,
+				E9DBB7472A98044700E3A4CD /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,9 +23,15 @@ platform :ios do
     scan(
       scheme: "calmo",
       workspace: "calmo.xcworkspace",
+      testplan: "calmo",
       devices: ["iPhone 14"]
     )
     publish_code_covrage
+  end
+
+  lane :screenshots do
+    capture_screenshots
+    frame_screenshots(white: true)
   end
 
   # xcodebuild test -scheme calmoUITests -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -workspace calmo.xcworkspace
