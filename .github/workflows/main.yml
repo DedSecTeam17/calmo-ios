@@ -50,3 +50,10 @@ jobs:
         REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}  
         TARGET_COVERAGE: ${{ secrets.TARGET_COVERAGE }}  
 
+
+
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}        
