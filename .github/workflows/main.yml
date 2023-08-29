@@ -34,15 +34,15 @@ jobs:
       run: xcrun simctl list devices 
 
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.2 # You can specify the Ruby version you need
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.7.2 # You can specify the Ruby version you need
 
-    - name: Install Bundler and Fastlane
-      run: |
-        gem install bundler
-        bundle install --without=documentation --path vendor/bundle
+    # - name: Install Bundler and Fastlane
+    #   run: |
+    #     gem install bundler
+    #     bundle install --without=documentation --path vendor/bundle
 
     - name: Run Fastlane Unit Tests
       run: |
