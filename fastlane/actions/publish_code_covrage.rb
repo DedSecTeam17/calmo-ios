@@ -71,7 +71,7 @@ module Fastlane
 
         GithubApiAction.run(
           server_url: "https://api.github.com",
-          api_token: ENV["GITHUB_API_TOKEN"],
+          api_token: ENV["REPO_ACCESS_TOKEN"],
           http_method: "POST",
           path: "/repos/DedSecTeam17/calmo-ios/statuses/#{commit_sha}",
           raw_body:"{\"state\":\"#{status}\", \"description\": \"#{message}\", \"context\": \"coverage\"}",
