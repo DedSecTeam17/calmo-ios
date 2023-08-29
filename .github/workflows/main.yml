@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
       
 
     - name: XCODE VERSION 
@@ -34,6 +36,15 @@ jobs:
       run: xcrun simctl list devices 
 
 
+    - name: Run Sonar Scanner
+      run: |
+          sonar-scanner \
+            -Dsonar.organization=dedsecteam17 \
+            -Dsonar.projectKey=DedSecTeam17_calmo-ios \
+            -Dsonar.sources=. \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}    
+
+
     # - name: Set up Ruby
     #   uses: ruby/setup-ruby@v1
     #   with:
@@ -51,9 +62,9 @@ jobs:
         TARGET_COVERAGE: ${{ secrets.TARGET_COVERAGE }}  
 
 
+    - name: Install Sonar Scanner
+      run: |
+        brew install sonar-scanner        
 
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}        
+
+
