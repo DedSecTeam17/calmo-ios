@@ -58,7 +58,6 @@ module Fastlane
       end
 
 
-      # FASTLANE GITUHB STATUS TOKEN ---> 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
 
 
       def self.publish_to_github(code_coverage_number_as_float,target_coverage,message, commit_sha)
