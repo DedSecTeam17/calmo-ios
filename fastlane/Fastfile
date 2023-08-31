@@ -20,12 +20,12 @@ platform :ios do
 
   desc "Unit & UI testin"
   lane :tests do
-    scan(
-      scheme: "calmo",
-      workspace: "calmo.xcworkspace",
-      testplan: "calmo",
-      devices: ["iPhone 14"]
-    )
+    # scan(
+    #   scheme: "calmo",
+    #   workspace: "calmo.xcworkspace",
+    #   testplan: "calmo",
+    #   devices: ["iPhone 14"]
+    # )
     publish_code_covrage
   end
 

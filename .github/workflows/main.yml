@@ -54,7 +54,7 @@ jobs:
 
 
 
-  job_on_ubuntu:
+  code_analysis:
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -70,6 +70,7 @@ jobs:
          -Dsonar.organization=dedsecteam17
          -Dsonar.projectKey=DedSecTeam17_calmo-ios
          -Dsonar.verbose=true
+         -Dsonar.cfamily.coverage.reportPath=./fastlane/code_coverage/cobertura.xml
          -Dsonar.c.file.suffixes=-
          -Dsonar.cpp.file.suffixes=-
          -Dsonar.objc.file.suffixes=-

@@ -14,7 +14,8 @@ module Fastlane
           scheme: 'calmo',
           proj: 'calmo.xcodeproj',
           output_directory: "fastlane/code_coverage", 
-          html: true
+          html: false,
+          coverage_service: "cobertura_xml"
       )
         UI.message "Obtaining coverage number"
         code_coverage = get_code_coverage()
