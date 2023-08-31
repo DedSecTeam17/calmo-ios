@@ -7,7 +7,50 @@
 		<key>calmo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>calmoTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>calmoUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>calmoUnitTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E97C5A662A5F5A9C0016D646</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9DBB70A2A920C3100E3A4CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9DBB7202A9211BF00E3A4CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9DBB72D2A92122D00E3A4CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9DBB73C2A94D76F00E3A4CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
