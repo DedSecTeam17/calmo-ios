@@ -22,7 +22,9 @@ struct AppBody<Content:View>: View {
     var body: some View {
         GeometryReader { geometryReader in
             VStack(alignment: .leading){
+                Text("Hi there <3")
                 content(navManager)
+
             }
             .frame(
                 width: geometryReader.size.width,
