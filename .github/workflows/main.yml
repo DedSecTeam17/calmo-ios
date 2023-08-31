@@ -60,9 +60,16 @@ jobs:
     steps:
      - name: Checkout code
        uses: actions/checkout@v2
+       with:
+        fetch-depth: 0
 
      - name: SonarCloud Scan
        uses: sonarsource/sonarcloud-github-action@master
+       with:
+        args: >
+         -Dsonar.organization=DedSecTeam17_calmo-ios
+         -Dsonar.projectKey=dedsecteam17
+         -Dsonar.verbose=true
        env:
          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
