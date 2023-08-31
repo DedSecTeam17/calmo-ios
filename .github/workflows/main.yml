@@ -67,8 +67,8 @@ jobs:
        uses: sonarsource/sonarcloud-github-action@master
        with:
         args: >
-         -Dsonar.organization=DedSecTeam17_calmo-ios
-         -Dsonar.projectKey=dedsecteam17
+         -Dsonar.organization=dedsecteam17
+         -Dsonar.projectKey=DedSecTeam17_calmo-ios
          -Dsonar.verbose=true
        env:
          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
