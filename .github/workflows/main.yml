@@ -26,8 +26,8 @@ jobs:
       run: xcrun simctl list devices 
       
 
-    - name: BOOT iphone 14
-      run:  xcrun simctl boot "iPhone 14"
+    # - name: BOOT iphone 14
+    #   run:  xcrun simctl boot "iPhone 14"
 
 
 
@@ -55,6 +55,7 @@ jobs:
 
 
   job_on_ubuntu:
+    needs: test
     runs-on: ubuntu-latest
     steps:
      - name: Checkout code
@@ -64,7 +65,9 @@ jobs:
        uses: sonarsource/sonarcloud-github-action@master
        env:
          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}       
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
+         SONAR_PROJECTKEY: DedSecTeam17_calmo-ios
+         SONAR_ORG: dedsecteam17      
 
 
        
