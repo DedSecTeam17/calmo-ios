@@ -61,6 +61,14 @@
 		E9DBB7332A92122D00E3A4CD /* calmoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB7322A92122D00E3A4CD /* calmoUITestsLaunchTests.swift */; };
 		E9DBB7402A94D76F00E3A4CD /* calmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB73F2A94D76F00E3A4CD /* calmoTests.swift */; };
 		E9DBB7472A98044700E3A4CD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBB7462A98044700E3A4CD /* SnapshotHelper.swift */; };
+		E9FF89D22AA78BF500EBB55E /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89D12AA78BF500EBB55E /* IconButton.swift */; };
+		E9FF89D42AA78EA700EBB55E /* PostloginTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89D32AA78EA700EBB55E /* PostloginTopBar.swift */; };
+		E9FF89D62AA8DD1F00EBB55E /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89D52AA8DD1F00EBB55E /* CustomTabView.swift */; };
+		E9FF89D92AAA322300EBB55E /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89D82AAA322300EBB55E /* HomeTab.swift */; };
+		E9FF89DB2AAB7E2800EBB55E /* HeartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89DA2AAB7E2800EBB55E /* HeartShape.swift */; };
+		E9FF89FF2AB0BC9A00EBB55E /* PostloginTopBarWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF89FE2AB0BC9A00EBB55E /* PostloginTopBarWithImage.swift */; };
+		E9FF8A012AB0C25300EBB55E /* PlayListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF8A002AB0C25300EBB55E /* PlayListScreen.swift */; };
+		E9FF8A032AB21B0600EBB55E /* AlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF8A022AB21B0600EBB55E /* AlbumScreen.swift */; };
 		EF9A1897EB5A8785969B53AD /* Pods_calmo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +161,14 @@
 		E9DBB73D2A94D76F00E3A4CD /* calmoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calmoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBB73F2A94D76F00E3A4CD /* calmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calmoTests.swift; sourceTree = "<group>"; };
 		E9DBB7462A98044700E3A4CD /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		E9FF89D12AA78BF500EBB55E /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		E9FF89D32AA78EA700EBB55E /* PostloginTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostloginTopBar.swift; sourceTree = "<group>"; };
+		E9FF89D52AA8DD1F00EBB55E /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		E9FF89D82AAA322300EBB55E /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		E9FF89DA2AAB7E2800EBB55E /* HeartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartShape.swift; sourceTree = "<group>"; };
+		E9FF89FE2AB0BC9A00EBB55E /* PostloginTopBarWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostloginTopBarWithImage.swift; sourceTree = "<group>"; };
+		E9FF8A002AB0C25300EBB55E /* PlayListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListScreen.swift; sourceTree = "<group>"; };
+		E9FF8A022AB21B0600EBB55E /* AlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumScreen.swift; sourceTree = "<group>"; };
 		F0F272E4A49D4BAF435F90D8 /* Pods-calmoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calmoUITests.debug.xcconfig"; path = "Target Support Files/Pods-calmoUITests/Pods-calmoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7D8B2013C0CC59B8BF0D7B2 /* Pods_calmo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calmo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -240,6 +256,7 @@
 				E95BB4092A64450900CB5700 /* SkipButton.swift */,
 				E95BB40B2A64483800CB5700 /* CustomButton.swift */,
 				E95BB40D2A644B4700CB5700 /* TextButton.swift */,
+				E9FF89D12AA78BF500EBB55E /* IconButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -256,7 +273,10 @@
 		E95BB4202A6579ED00CB5700 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				E9FF89D72AAA321200EBB55E /* HomeTabs */,
 				E95BB4212A657A0500CB5700 /* MainHomeScreen.swift */,
+				E9FF8A002AB0C25300EBB55E /* PlayListScreen.swift */,
+				E9FF8A022AB21B0600EBB55E /* AlbumScreen.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -351,6 +371,10 @@
 				E95BB41A2A645BAC00CB5700 /* CustomToggle.swift */,
 				E95BB41C2A645E0100CB5700 /* CustomForm.swift */,
 				E95BB41E2A649C5400CB5700 /* SignUpOnboardinHeader.swift */,
+				E9FF89D32AA78EA700EBB55E /* PostloginTopBar.swift */,
+				E9FF89D52AA8DD1F00EBB55E /* CustomTabView.swift */,
+				E9FF89DA2AAB7E2800EBB55E /* HeartShape.swift */,
+				E9FF89FE2AB0BC9A00EBB55E /* PostloginTopBarWithImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -398,6 +422,14 @@
 				E9DBB73F2A94D76F00E3A4CD /* calmoTests.swift */,
 			);
 			path = calmoTests;
+			sourceTree = "<group>";
+		};
+		E9FF89D72AAA321200EBB55E /* HomeTabs */ = {
+			isa = PBXGroup;
+			children = (
+				E9FF89D82AAA322300EBB55E /* HomeTab.swift */,
+			);
+			path = HomeTabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -662,6 +694,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FF89DB2AAB7E2800EBB55E /* HeartShape.swift in Sources */,
+				E9FF89FF2AB0BC9A00EBB55E /* PostloginTopBarWithImage.swift in Sources */,
 				E95BB4812A73317400CB5700 /* View.swift in Sources */,
 				E95BB40E2A644B4700CB5700 /* TextButton.swift in Sources */,
 				E95BB41F2A649C5400CB5700 /* SignUpOnboardinHeader.swift in Sources */,
@@ -671,13 +705,18 @@
 				E97C5A6D2A5F5A9C0016D646 /* ContentView.swift in Sources */,
 				E95BB4222A657A0500CB5700 /* MainHomeScreen.swift in Sources */,
 				E95BB3A72A60F0FD00CB5700 /* SignInScreen.swift in Sources */,
+				E9FF89D92AAA322300EBB55E /* HomeTab.swift in Sources */,
+				E9FF89D42AA78EA700EBB55E /* PostloginTopBar.swift in Sources */,
 				E95BB3B72A636E8000CB5700 /* SignUpCategoryScreen..swift in Sources */,
 				E95BB4122A644D1800CB5700 /* String.swift in Sources */,
 				E95BB4832A73319800CB5700 /* NavigationManager.swift in Sources */,
 				E95BB4142A644F2900CB5700 /* OnboardingHeader.swift in Sources */,
 				E95BB41D2A645E0100CB5700 /* CustomForm.swift in Sources */,
+				E9FF89D62AA8DD1F00EBB55E /* CustomTabView.swift in Sources */,
+				E9FF89D22AA78BF500EBB55E /* IconButton.swift in Sources */,
 				E95BB40A2A64450900CB5700 /* SkipButton.swift in Sources */,
 				E97C5A6B2A5F5A9C0016D646 /* calmoApp.swift in Sources */,
+				E9FF8A032AB21B0600EBB55E /* AlbumScreen.swift in Sources */,
 				E95BB3B32A6350AD00CB5700 /* SignUpScreen.swift in Sources */,
 				E95BB3A92A60FCC900CB5700 /* CustomNavBar.swift in Sources */,
 				E97C5A812A603E090016D646 /* AppBody.swift in Sources */,
@@ -687,6 +726,7 @@
 				E95BB3B92A63727E00CB5700 /* SignUpArtistScreen_.swift in Sources */,
 				E95BB3B52A6352CD00CB5700 /* SignUpSocailMediaScreen.swift in Sources */,
 				E97C5A842A603EF70016D646 /* AppTheme.swift in Sources */,
+				E9FF8A012AB0C25300EBB55E /* PlayListScreen.swift in Sources */,
 				E95BB3B12A630CDE00CB5700 /* RecoverPasswordScreen.swift in Sources */,
 				E95BB4192A64521000CB5700 /* AppRegx.swift in Sources */,
 				E95BB41B2A645BAC00CB5700 /* CustomToggle.swift in Sources */,
@@ -868,7 +908,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"calmo/Preview Content\"";
-				DEVELOPMENT_TEAM = NDWGY9K2GB;
+				DEVELOPMENT_TEAM = 622R8DQ67C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calmo/Info.plist;
@@ -900,7 +940,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"calmo/Preview Content\"";
-				DEVELOPMENT_TEAM = NDWGY9K2GB;
+				DEVELOPMENT_TEAM = 622R8DQ67C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calmo/Info.plist;
@@ -969,7 +1009,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NDWGY9K2GB;
+				DEVELOPMENT_TEAM = 622R8DQ67C;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -988,7 +1028,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NDWGY9K2GB;
+				DEVELOPMENT_TEAM = 622R8DQ67C;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;

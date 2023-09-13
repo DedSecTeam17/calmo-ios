@@ -22,7 +22,6 @@ struct AppBody<Content:View>: View {
     var body: some View {
         GeometryReader { geometryReader in
             VStack(alignment: .leading){
-                Text("Hi there <3")
                 content(navManager)
 
             }
@@ -31,7 +30,7 @@ struct AppBody<Content:View>: View {
                 height: geometryReader.size.height            )
         
 
-            .background(ThemeManager(theme: lightTheme).currentTheme.backgroundColor)
+            .background(ThemeManager(theme: lightTheme).currentTheme.backgroundColor.opacity(0.4))
             
         }
     }

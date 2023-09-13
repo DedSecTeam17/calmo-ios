@@ -26,21 +26,14 @@ struct SkipButton: View {
         HStack(alignment: .center, spacing: 35.0) {
             Text("Skip")
                 .font(.caption)
-            Button(
-                action : {
-                    self.onTap()
-                }
-            ){
-                Image("arrowright")
-                    .renderingMode(.template)
-                    .foregroundColor(self.arrowCoolor)
-                    .padding(.all)
-            }
-            .background(self.backgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: 24))
-            .navigationDestination(for: String.self) { item in
-                SecondView()
-            }
+            
+            
+            IconButton(
+            iconName: "arrowright",
+            onTap: self.onTap
+            )
+
+        
         }
         .frame(
             width: UIScreen.main.bounds.width,
