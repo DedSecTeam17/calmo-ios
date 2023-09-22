@@ -12,113 +12,36 @@ struct AlbumScreen: View {
         AppBody { navManager in
             
             
-            
+            PostloginTopBar(
+                
+                leadingText: "album",
+                leadingIcon: "arrowleft", onLeadingTapped:  {
+                    navManager.pop()
+                })
      
             ScrollView(.vertical) {
-                Rectangle()
-                    .fill(.clear)
-                    .frame(height: 80)
-            HStack(alignment: .top) {
-                Image("top_p1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 100,height: 100)
-                    .clipShape(RoundedCorner(radius: 10,corners: [.topRight,.bottomLeft]))
-                    .clipShape(RoundedCorner(radius: 30,corners: [.topLeft,.bottomRight]))
-                .overlay(alignment : .bottom) {
-                    Button {
-                        
-                    } label: {
-                        Image("play")
-                            .padding(.all,4)
-                            .background(.ultraThinMaterial)
-                            .foregroundColor(Color.primary.opacity(0.20))
-                            .foregroundStyle(.ultraThinMaterial)
-                            .clipShape(Circle())
-                            .offset(y:-10)
-                            .offset(x: 20)
-                            
-                    }
 
-                }
-            .padding(.all)
-                
-                VStack(alignment: .leading) {
-                    HStack(alignment: .center) {
-                        Text("Rescue me One Republic")
-                            .font(.body.weight(.bold))
-                            .padding(.trailing)
-                        Spacer()
-                        Button {
-                            
-                        } label: {
-                            Image("like")
-                        }
-
-                    }.padding(.trailing)
-                    
-                    HStack(alignment: .center) {
-                        Text("Album  /  2021")
-                            .font(.caption.weight(.light))
-                  
-
-                    }.padding(.trailing)
-                    HStack(alignment: .center) {
-                        Text("18 Songs - 2h 20min")
-                            .font(.caption.weight(.light))
-                  
-                        Spacer()
-                        
-                        Button {
-                            
-                        } label: {
-                            Image("upload")
-                        }
-
-                    }.padding(.trailing)
-                    
-                }.padding(.vertical)
-                
-                
-            }
+                AlbumHeader(imageName: "top_p1",albumTitle: "Rescue me One Republic",songsAndDurationTitle: "18 Songs - 2h 20min", albumInfo: "Album  /  2021",withLikeButton: true,withUploadButton: true,onUpload: {}, onLike: {})
         
             
-            Text("TRACK LIST")
-                .font(.caption.weight(.semibold))
+                HStack {
+                    Text("TRACK LIST")
+                    .font(.caption.weight(.semibold))
                 .padding(.horizontal)
+                    Spacer()
+                }
             
                 
                 LazyVStack {
                     ForEach(1...20, id: \.self) { i in
 
-                        HStack(alignment: .center) {
-                            
-                            VStack(alignment: .leading) {
-                                Text("Milkshake")
-                                    .font(.caption.weight(.semibold))
-                                Text("Harry Styles")
-                                    .font(.caption2.weight(.light))
-                                    .padding(.top,1)
+                        SongItem(songName: "Milkshake",artistName: "Harry Styles",duration: "3:24")
 
-
-                            }
-                            Spacer()
-              
-                            Text("3:24")
-                                .font(.caption2.weight(.light))
-                                .padding(.top,1)
-                        }.padding(.horizontal)
-                            .padding(.vertical,4)
                     }
                 }
                 
             }.overlay (alignment : .top){
-                PostloginTopBar(
-                    
-                    leadingText: "album",
-                    leadingIcon: "arrowleft", onLeadingTapped:  {
-                        navManager.pop()
-                    })
+   
             }
             
             

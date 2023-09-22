@@ -82,9 +82,6 @@ struct HomeTab: View {
     
             
             ScrollView {
-                Rectangle()
-                    .fill(.clear)
-                    .frame(height: 80)
                 HStack {
                     Text("TOP PLAYLISTS")
                         .font(.subheadline.weight(.semibold))
@@ -122,10 +119,10 @@ struct HomeTab: View {
                     VStack(alignment: .leading) {
                         Image(topAlbums[index].imageName)
                             .resizable()
-                            .frame(height: getAlbumsWithRightSize()[index].size == .small ? 120 : 200)
-                            .aspectRatio(contentMode: .fit)
-                        
                       
+                            .aspectRatio(contentMode: .fill)
+                        
+                            .frame(height: getAlbumsWithRightSize()[index].size == .small ? 120 : 200)
                           
                             .clipShape(RoundedCorner(
                             radius: 30,
@@ -172,7 +169,7 @@ struct HomeTab: View {
             
             Image(imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .scaledToFill()
                 .frame(width: 110,height: 120)
                 .clipShape(RoundedCorner(
                 radius: 20,
@@ -196,10 +193,6 @@ struct HomeTab: View {
         }
         .frame(width: 120)
         .onTapGesture(perform: onTap)
-        
-  
-   
-     
     }
     
 }

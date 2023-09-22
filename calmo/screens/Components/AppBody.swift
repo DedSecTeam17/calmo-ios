@@ -30,7 +30,7 @@ struct AppBody<Content:View>: View {
                 height: geometryReader.size.height            )
         
 
-            .background(ThemeManager(theme: lightTheme).currentTheme.backgroundColor.opacity(0.4))
+            .background(ThemeManager(theme: lightTheme).currentTheme.backgroundColor)
             
         }
     }

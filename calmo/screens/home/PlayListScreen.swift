@@ -74,31 +74,10 @@ struct PlayListScreen: View {
                 
                 
                 LazyVStack {
-                           ForEach(1...20, id: \.self) { i in
-                               HStack(alignment: .center) {
-                                   Image("top_al2")
-                                       .resizable()
-                                  
-                                       .scaledToFill()
-                                       .frame(width: 40,height: 40)
-                                       .clipShape(RoundedTopLeftBottomRigthCorners(cornerRadius: 10))
-                                   VStack(alignment: .leading) {
-                                       Text("Need you now")
-                                           .padding(.bottom,1)
-                                       Text("TVORHI")
-                                           .font(.caption2.weight(.light))
-                                   }
-                                   
-                                   Spacer()
-                                   Button {
-                                       
-                                   } label: {
-                                       Image("morehorizontal")
-                                   }
-
-                               }.padding(.horizontal,16)
-                                   .padding(.vertical,4)
-                           }
+                    ForEach(0...10,id: \.self) { index in
+                        PlaylistSong(imageName: "top_al2",title: "Need you now",artist: "TVORHI")
+                    }
+                           
                 }.padding(.vertical,16)
                 
                 

@@ -21,6 +21,9 @@ struct PostloginTopBar: View {
     var onTrailingTapped : ()->Void = {}
 
     
+    var centerTitle : Bool = false
+
+    
     var body: some View {
         
     
@@ -29,14 +32,17 @@ struct PostloginTopBar: View {
             if let presentedleadingIcon : String = self.leadingIcon  {
                 IconButton(
                     iconName: presentedleadingIcon,onTap: self.onLeadingTapped)
-                .padding(.leading)
             }
      
+            if centerTitle {
+                Spacer()
+            }
             
             if let presentedLeadingText : String = self.leadingText  {
                 Text(presentedLeadingText)
-                    .frame(width: 120)
-                    .font(AppFonts.title2.weight(.bold))
+                    .font(AppFonts.title2.weight(.semibold))
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal)
               
             }
             
@@ -47,17 +53,15 @@ struct PostloginTopBar: View {
             if let presentedTrailingIcon: String = self.trailingIcon  {
                 IconButton(
                     iconName: presentedTrailingIcon,onTap: self.onTrailingTapped)
-                .padding(.horizontal)
+          
             }
             
       
 
 
-        }.padding(.horizontal,4)
-            .padding(.vertical)
-            .background(.ultraThinMaterial)
-            .foregroundColor(Color.primary.opacity(0.50))
-            .foregroundStyle(.ultraThinMaterial)
+        }.padding(.horizontal,16)
+            .frame(height: 60)
+            .background(ThemeManager(theme: lightTheme).currentTheme.backgroundColor)
 
     }
 }
@@ -65,12 +69,12 @@ struct PostloginTopBar: View {
 struct PostloginTopBar_Previews: PreviewProvider {
     static var previews: some View {
         PostloginTopBar(
-        leadingText: "Best of the weeks",
+        leadingText: "Best",
         leadingIcon: "arrowright",
         trailingIcon: "search",
         onTrailingTapped: {
             print("Clicked")
-        }
+        },centerTitle: true
         )
             .background(.gray)
     }

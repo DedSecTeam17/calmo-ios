@@ -7,17 +7,41 @@
 
 import SwiftUI
 
+
+
+
+
 struct MainHomeScreen: View {
-    @State private var selectedTab = 1
+    @State private var selectedTab = 4
     
     @State private var offsetX: CGFloat = 0
+    
+    @State private var artistsSheetType : SheetType = .featured
 
+    
+    
+    var titles =  [
+    "best of the week",
+    "search",
+    "artists",
+    "",
+    ""
+    ]
+    
+    @State private var isSearchConfigPresented = false
+    @State private var isArtistSheetPresented = false
+
+    
     init() {
         UITabBar.appearance().isHidden = true
     }
 
     var body: some View {
         AppBody { navManager in
+            
+            AnyView(            TopBarByTapType(selectedTab: selectedTab)
+)
+            Spacer(minLength: 16)
 
             TabView(selection: $selectedTab) {
                 HomeTab()
@@ -26,32 +50,29 @@ struct MainHomeScreen: View {
 
 
 
-                AppBody(content: { NavigationManager in
-
-                    Text("search tap ")
-
-                })
-
+                SearchTap()
+                   
                        .tag(2)
 
 
-                AppBody(content: { NavigationManager in
-
-                    Text("mix tap ")
+                MixTap(onSeeAllFeaturedArtists: {
+                    isArtistSheetPresented = true
+                    artistsSheetType = .featured
+                },onSeeAllRisingArtists: {
+                    isArtistSheetPresented = true
+                    artistsSheetType = .rising
 
                 })
-      
+                    .sheet(isPresented: $isArtistSheetPresented, content: {
+                        ArtistsSheet(onClose: {
+                            isArtistSheetPresented.toggle()
+                        },sheetType: $artistsSheetType)
+                    })
                        .tag(3)
 
 
-                AppBody(content: { NavigationManager in
-
-                    Text("chat tap ")
-
-
-                })
-
-                       
+                
+                ChatTab()
                        .tag(4)
                 
                 AppBody(content: { NavigationManager in
@@ -76,18 +97,55 @@ struct MainHomeScreen: View {
                 ])
             }
          
-        }.overlay (alignment : .top){
-            PostloginTopBar(
+        }
+        
+    }
+    
+    func TopBarByTapType(selectedTab : Int  )->  any View{
+        
+        switch selectedTab {
+         case 1:
+            return   PostloginTopBar(
+                leadingText: "best of the week",
+                trailingIcon: "more", onTrailingTapped:  {
+                    print("DO SEARCH")
+                    offsetX = 100
+                })
+        case 2:
+           return   PostloginTopBar(
+               leadingText: "search",
+               trailingIcon: "filters", onTrailingTapped:  {
+                   print("DO SEARCH")
+                   offsetX = 100
+                   isSearchConfigPresented.toggle()
+               }).sheet(isPresented: $isSearchConfigPresented) {
+                   SearchFilterSheet {
+                       print("toggle...")
+                       isSearchConfigPresented.toggle()
+                   }
+               }
+        case 3:
+            return   PostloginTopBar(
+                leadingText: "artists",
+                trailingIcon: "more", onTrailingTapped:  {
+                    print("DO SEARCH")
+                    offsetX = 100
+                })
+        case 4:
+            return   PostloginTopBar(
+                leadingText: "messages",
+                trailingIcon: "edit", onTrailingTapped:  {
+         
+                })
+            
+        default:
+           return PostloginTopBar(
             leadingText: "best of the week",
-            trailingIcon: "search") {
+            trailingIcon: "more", onTrailingTapped:  {
                 print("DO SEARCH")
                 offsetX = 100
-            }
-    
-            
+            })
         }
-
-        
     }
 }
 
@@ -97,3 +155,4 @@ struct MainHomeScreen_Previews: PreviewProvider {
             .environmentObject(NavigationManager())
     }
 }
+
