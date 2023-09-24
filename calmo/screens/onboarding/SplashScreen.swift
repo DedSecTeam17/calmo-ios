@@ -27,7 +27,7 @@ struct SplashScreen: View {
                 SkipButton {
                     navManager.replace(.Onboarding)
 
-                }
+                }.accessibilityIdentifier("splash_screen_skip")
                 
             }
         }

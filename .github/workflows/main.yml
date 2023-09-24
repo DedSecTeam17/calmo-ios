@@ -1,0 +1,98 @@
+name: Run Fastlane Unit Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  test:
+    runs-on: [self-hosted, macOS]
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+      
+
+    - name: XCODE VERSION 
+      run: xcodebuild -version
+
+    - name: install pods
+      run: pod install
+
+    - name: List Available Simulators
+      run: xcrun simctl list devices 
+      
+
+    # - name: BOOT iphone 14
+    #   run:  xcrun simctl boot "iPhone 14"
+
+
+
+
+    - name: List Available Simulators
+      run: xcrun simctl list devices 
+
+
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.7.2 # You can specify the Ruby version you need
+
+    # - name: Install Bundler and Fastlane
+    #   run: |
+    #     gem install bundler
+    #     bundle install --without=documentation --path vendor/bundle
+
+    # - name: Run Fastlane Unit Tests
+    #   run: fastlane tests
+    #   env: 
+    #     REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}  
+    #     TARGET_COVERAGE: ${{ secrets.TARGET_COVERAGE }}  
+
+
+
+  code_analysis:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v2
+       with:
+        fetch-depth: 0
+
+
+     - name: SonarQube
+       uses: sonarsource/sonarqube-scan-action@master
+       with:
+        args: >
+         -Dsonar.verbose=true
+         -Dsonar.cfamily.coverage.reportPath=./fastlane/code_coverage/cobertura.xml
+
+        
+       env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_LOCAL }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+
+    #  - name: SonarCloud Scan
+    #    uses: sonarsource/sonarcloud-github-action@master
+    #    with:
+    #     args: >
+    #      -Dsonar.organization=dedsecteam17
+    #      -Dsonar.projectKey=DedSecTeam17_calmo-ios
+    #      -Dsonar.verbose=true
+    #      -Dsonar.cfamily.coverage.reportPath=./fastlane/code_coverage/cobertura.xml
+    #      -Dsonar.c.file.suffixes=-
+    #      -Dsonar.cpp.file.suffixes=-
+    #      -Dsonar.objc.file.suffixes=-
+    #    env:
+    #      GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+    #      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
+        
+
+
+       

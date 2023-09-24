@@ -23,6 +23,7 @@ struct AppBody<Content:View>: View {
         GeometryReader { geometryReader in
             VStack(alignment: .leading){
                 content(navManager)
+
             }
             .frame(
                 width: geometryReader.size.width,
