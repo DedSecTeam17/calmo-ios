@@ -67,6 +67,14 @@ jobs:
 
      - name: SonarQube
        uses: sonarsource/sonarqube-scan-action@master
+       with:
+        args: >
+         -Dsonar.verbose=true
+         -Dsonar.cfamily.coverage.reportPath=./fastlane/code_coverage/cobertura.xml
+         -Dsonar.c.file.suffixes=-
+         -Dsonar.cpp.file.suffixes=-
+         -Dsonar.objc.file.suffixes=-
+        
        env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_LOCAL }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
