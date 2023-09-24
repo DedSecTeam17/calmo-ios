@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatTab: View {
     let primaryColor = ThemeManager(theme: lightTheme).currentTheme.primaryColor
-
+    
     
     @State var text:String = ""
     var body: some View {
@@ -42,7 +42,7 @@ struct ChatTab: View {
     
     
     func OnlineUsers(navManager  : NavigationManager) -> some View{
-        
+         
         return ScrollView(.horizontal,showsIndicators: false) {
             
             LazyHStack {
@@ -65,7 +65,7 @@ struct ChatTab: View {
                                 
                             }
                         Text("Jane")
-
+                        
                     }.onTapGesture {
                         navManager.pushView(.ChatScreen)
                     }
@@ -73,7 +73,7 @@ struct ChatTab: View {
                 
                 
                 
-      
+                
                 
             }.frame(height: 120)
                 .padding(.horizontal)
@@ -86,9 +86,9 @@ struct ChatTab: View {
     func RecentUsers(navManager : NavigationManager)-> some View{
         
         return LazyVStack {
-     
-                ForEach(0..<15,id: \.self) { index in
-                    HStack(alignment: .top) {
+            
+            ForEach(0..<15,id: \.self) { index in
+                HStack(alignment: .top) {
                     Image("top_al1")
                         .resizable()
                         .scaledToFill()
@@ -102,7 +102,7 @@ struct ChatTab: View {
                             .padding(.bottom,2)
                         Text("I’m watching Friends,what are u doin? 😍")
                             .font(.caption.weight(.light))
-                       
+                        
                         
                     }
                     Spacer()
@@ -114,18 +114,18 @@ struct ChatTab: View {
                             .foregroundColor(.white)
                             .background(Circle().fill(primaryColor))
                     }
-                    }
-                    .padding(.all)
-                        .background(RoundedCorner(radius: 10).fill(.white))
-                        .padding(.horizontal)
-                        .shadow(color: .gray.opacity(0.2),radius: 15)
-                    .onTapGesture {
-                        navManager.pushView(.ChatScreen)
-                    }
-                  
+                }
+                .padding(.all)
+                .background(RoundedCorner(radius: 10).fill(.white))
+                .padding(.horizontal)
+                .shadow(color: .gray.opacity(0.2),radius: 15)
+                .onTapGesture {
+                    navManager.pushView(.ChatScreen)
+                }
+                
             }
-                    
-              
+            
+            
         }
         
         
