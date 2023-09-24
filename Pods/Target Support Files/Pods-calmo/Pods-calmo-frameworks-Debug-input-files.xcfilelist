@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-calmo/Pods-calmo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/UIPilot/UIPilot.framework
+${BUILT_PRODUCTS_DIR}/WaterfallGrid/WaterfallGrid.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Reveal-SDK/RevealServer.framework/RevealServer

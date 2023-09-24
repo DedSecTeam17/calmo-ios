@@ -14,8 +14,8 @@ struct CustomTextFiled: View {
     var hintText : String = ""
     
     
-    var maxLength : Int
-    var minLength : Int
+    var maxLength : Int = 100
+    var minLength : Int = 6
     var regx : AppRegx?
     
     
@@ -28,11 +28,30 @@ struct CustomTextFiled: View {
     var regxErrorMessage : String = ""
     
     var isSecureText : Bool = false
+    var isBordered : Bool = false
+    
+    
+    var requireValidation : Bool = true
+
+    
+    var backgroundColor : Color = .white
+
+
     var validationResult : (Bool)->Void
     
     
     @State  var sizeErrorMessage : String = ""
     
+    
+    var leadingIcon : String = ""
+    
+    var trailingContents : AnyView = AnyView(EmptyView())
+    
+    
+    
+//    init(@ViewBuilder content:@escaping (NavigationManager) -> Content) {
+//        self.content = content
+//    }
     
     
     
@@ -42,94 +61,131 @@ struct CustomTextFiled: View {
         VStack(alignment: .leading) {
             
             if self.isSecureText {
-                SecureField(hintText, text: $text)
-                    .padding(.all)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.white)
-                        
-                    )
-                    .onChange(of: text) { newValue in
-                        if newValue.count > self.maxLength {
-                            self.text = String(newValue.prefix(self.maxLength))
-                            self.isValidSize = true
-                            
-                        }
-                        
-                        if newValue.count < self.minLength {
-                            self.isValidSize = false
-                            self.sizeErrorMessage = "Minum characters required is \(self.minLength)"
-                        }else{
-                            self.isValidSize = true
-                            self.sizeErrorMessage = ""
-                        }
-                        
-                        
-                        if let unrappedReqx = self.regx {
-                            self.isValidText = newValue.validate(regx: unrappedReqx)
-                            
-                        }else {
-                            self.isValidText  = true
-                        }
-                        
-                        self.validationResult(isValidSize && isValidText)
-                        
+                HStack {
+                    if !leadingIcon.isEmpty {
+                        Image(leadingIcon)
+                            .padding(.leading)
                     }
+          
+                    SecureField(hintText, text: $text)
+                        .padding(.vertical)
+                        .padding(.horizontal,!leadingIcon.isEmpty ? 0 : 16)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(backgroundColor)
+                            
+                        )
+                        
+                        .onChange(of: text) { newValue in
+                            
+                            if self.requireValidation {
+                                if newValue.count > self.maxLength {
+                                    self.text = String(newValue.prefix(self.maxLength))
+                                    self.isValidSize = true
+                                    
+                                }
+                                
+                                if newValue.count < self.minLength {
+                                    self.isValidSize = false
+                                    self.sizeErrorMessage = "Minum characters required is \(self.minLength)"
+                                }else{
+                                    self.isValidSize = true
+                                    self.sizeErrorMessage = ""
+                                }
+                                
+                                
+                                if let unrappedReqx = self.regx {
+                                    self.isValidText = newValue.validate(regx: unrappedReqx)
+                                    
+                                }else {
+                                    self.isValidText  = true
+                                }
+                                self.validationResult(isValidSize && isValidText)
+
+                            }else{
+                                self.validationResult(true)
+
+                            }
+           
+                            
+                            
+                    }
+                    HStack {
+                        trailingContents
+                    }
+                }.background(RoundedRectangle(cornerRadius: 10).strokeBorder(.black,lineWidth: 1))
                 
             }else {
-                TextField(hintText, text: $text)
-                    .padding(.all)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.white)
-                        
-                    )
-                    .onChange(of: text) { newValue in
-                        if newValue.count > self.maxLength {
-                            self.text = String(newValue.prefix(self.maxLength))
-                            self.isValidSize = true
-                            
-                        }
-                        
-                        if newValue.count < self.minLength {
-                            self.isValidSize = false
-                            self.sizeErrorMessage = "Minum characters required is \(self.minLength)"
-                        }else{
-                            self.isValidSize = true
-                            self.sizeErrorMessage = ""
-                        }
-                        
-                        
-                        if let unrappedReqx = self.regx {
-                            self.isValidText = newValue.validate(regx: unrappedReqx)
-                            
-                        }else {
-                            self.isValidText  = true
-                        }
-                        
-                        self.validationResult(isValidSize && isValidText)
-                        
+                
+                HStack {
+                    if !leadingIcon.isEmpty {
+                        Image(leadingIcon)
+                            .padding(.leading)
                     }
+                    TextField(hintText, text: $text)
+                        .padding(.vertical)
+                        .padding(.horizontal,!leadingIcon.isEmpty ? 0 : 16)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(backgroundColor)
+                            
+                        )
+                        .onChange(of: text) { newValue in
+                            if newValue.count > self.maxLength {
+                                self.text = String(newValue.prefix(self.maxLength))
+                                self.isValidSize = true
+                                
+                            }
+                            
+                            if newValue.count < self.minLength {
+                                self.isValidSize = false
+                                self.sizeErrorMessage = "Minum characters required is \(self.minLength)"
+                            }else{
+                                self.isValidSize = true
+                                self.sizeErrorMessage = ""
+                            }
+                            
+                            
+                            if let unrappedReqx = self.regx {
+                                self.isValidText = newValue.validate(regx: unrappedReqx)
+                                
+                            }else {
+                                self.isValidText  = true
+                            }
+                            
+                            self.validationResult(isValidSize && isValidText)
+                            
+                    }
+                    HStack {
+                        trailingContents
+                    }
+                }.background(RoundedRectangle(cornerRadius: 10).strokeBorder(.black,lineWidth: 1))
             }
             
-            
-            
-            if !isValidText && !text.isEmpty {
-                Text(self.regxErrorMessage)
-                    .font(.caption2)
-                    .foregroundColor(.orange)
-                    .padding(.horizontal,4)
+            if requireValidation {
+                if !isValidText && !text.isEmpty {
+                    Text(self.regxErrorMessage)
+                        .font(.caption2)
+                        .foregroundColor(.orange)
+                        .padding(.horizontal,4)
+                }
+                
+                if !isValidSize && !text.isEmpty {
+                    Text(self.sizeErrorMessage)
+                        .font(.caption2)
+                        .foregroundColor(.orange)
+                        .padding(.horizontal,4)
+                }
+                
             }
             
-            if !isValidSize && !text.isEmpty {
-                Text(self.sizeErrorMessage)
-                    .font(.caption2)
-                    .foregroundColor(.orange)
-                    .padding(.horizontal,4)
-            }
-            
+ 
             
         }.padding(.vertical,4)
+    }
+    
+    private func CustomizedTextField(){
+        
     }
 }
 
@@ -147,11 +203,11 @@ struct ParentView: View {
                     .padding(.all)
             }
             
-            CustomTextFiled(text: $text,hintText: "email", maxLength: 22, minLength: 6,regx: .email,regxErrorMessage: "invalid email",isSecureText: true) { isValid in
+            CustomTextFiled(text: $text,hintText: "email", maxLength: 22, minLength: 6,regx: .email,regxErrorMessage: "invalid email",isSecureText: false,requireValidation: false, backgroundColor: .clear,validationResult: { Bool in
                 
-                self.validForm = isValid
-                
-            }
+            },leadingIcon: "search",trailingContents: AnyView(HStack(content: {
+                Text("HI")
+            })))
         }
         .padding(.all)
         .background(.gray.opacity(0.5))

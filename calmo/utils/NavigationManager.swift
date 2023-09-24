@@ -23,6 +23,11 @@ enum NavigationPath: CaseIterable {
     case SignUpSoicalMedia
     case AccountCreated
     case MainHome
+    case PlayListScreen
+    case AlbumScreen
+    case ArtistScreen
+    case TrackScreen
+    case ChatScreen
 }
 
 
@@ -39,8 +44,14 @@ enum GlobalRoutes {
         .SignUpArtist : AnyView(SignUpArtistScreen().navigationBarHidden(true)),
         .SignUpSoicalMedia : AnyView(SignUpSocailMediaScreen().navigationBarHidden(true)),
         .MainHome : AnyView(MainHomeScreen().navigationBarBackButtonHidden(true)),
-        .AccountCreated : AnyView(AccountCreatedScreen().navigationBarHidden(true))
-        
+        .AccountCreated : AnyView(AccountCreatedScreen().navigationBarHidden(true)),
+        .PlayListScreen : AnyView(PlayListScreen().navigationBarHidden(true)),
+        .AlbumScreen : AnyView(AlbumScreen().navigationBarHidden(true)),
+        .ArtistScreen : AnyView(ArtistScreen().navigationBarHidden(true)),
+        .TrackScreen : AnyView(TrackScreen().navigationBarHidden(true)),
+        .ChatScreen : AnyView(ChatScreen().navigationBarHidden(true)),
+
+
     ]
     
     

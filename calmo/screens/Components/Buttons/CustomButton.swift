@@ -83,7 +83,7 @@ struct CustomButton: View {
                 
                 
             }
-        }.padding(.vertical,16)
+        }.padding(.vertical,8)
             .padding(.horizontal,64)
         
         

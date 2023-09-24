@@ -25,7 +25,7 @@ final class calmoUITests: XCTestCase {
     func testOnboardingFlow() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
-
+//        setupSnapshot(app)
         app.launch()
         let splashScreenSkipBtn = app.buttons["splash_screen_skip"]
         XCTAssert(splashScreenSkipBtn.exists)

@@ -21,6 +21,9 @@ final class calmoUnitTests: XCTestCase {
        XCTAssertTrue(1==1)
     }
 
-   
+    func testFunction2() throws {
+       XCTAssertTrue(1==1)
+    }
+
 
 }

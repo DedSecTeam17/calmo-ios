@@ -1,16 +1,24 @@
 PODS:
+  - Reveal-SDK (41)
   - UIPilot (2.0.2)
+  - WaterfallGrid (1.0.1)
 
 DEPENDENCIES:
+  - Reveal-SDK
   - UIPilot
+  - WaterfallGrid (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
+    - Reveal-SDK
     - UIPilot
+    - WaterfallGrid
 
 SPEC CHECKSUMS:
+  Reveal-SDK: c33a66072cd9ac5f3e6fb94984743ab5f3057d28
   UIPilot: dec727d11749dcb34654df4f8c94b98b29903566
+  WaterfallGrid: 0554a759d9a8aa136fc1769480ddb01bc6fb94b9
 
-PODFILE CHECKSUM: 81e165792d7772b7d96180eab234d1ba706cf851
+PODFILE CHECKSUM: 51a96d9168af83bb50a2a78b46be88bb42cdce4f
 
 COCOAPODS: 1.12.1

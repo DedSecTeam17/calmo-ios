@@ -21,7 +21,7 @@ struct Theme {
 
 
 let lightTheme = Theme(
-    primaryColor: Color(hex: "#4030FF"),
+    primaryColor: Color(hex: "#fe6601"),
     backgroundColor : Color(hex: "#EFF3F5"),
     secondaryColor: .black,
     primaryFont: .system(size: 16)
